@@ -10,11 +10,10 @@ This proposal introduces ability to extract given properties of object into new 
 Syntax is similar to one already implemented in C# and looks like following:
 
 ```javascript
-var vector3d = {x: 1, y: 2, z: 3};
-var badOrderVector2d = {y: 2, x: 1};
+var badVector = {y: 2, x: 1, z: 3};
 
-var vector1 = {vector3d.x, vector3d.y};
-var vector2 = {badOrderVector2d['x'], badOrderVector2d['y']};
+var vector1 = {badVector.x, badVector.y};
+var vector2 = {badVector['x'], badVector['y']};
 ```
 
 This desugars into following:
