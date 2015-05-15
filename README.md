@@ -10,19 +10,19 @@ This proposal introduces ability to extract given properties of object into new 
 Syntax is similar to one already implemented in C# and looks like following:
 
 ```javascript
-var badVector = {y: 2, x: 1, z: 3};
+var badVector = { y: 2, x: 1, z: 3 };
 
-var vector1 = {badVector.x, badVector.y};
-var vector2 = {badVector['x'], badVector['y']};
+var vector1 = { badVector.x, badVector.y };
+var vector2 = { badVector['x'], badVector['y'] };
 ```
 
 This desugars into following:
 
 ```javascript
-var badVector = {y: 2, x: 1, z: 3};
+var badVector = { y: 2, x: 1, z: 3 };
 
-var vector1 = {x: badVector.x, y: badVector.y};
-var vector2 = {'x': badVector['x'], 'y': badVector['y']};
+var vector1 = { x: badVector.x, y: badVector.y };
+var vector2 = { 'x': badVector['x'], 'y': badVector['y'] };
 ```
 
 ### Computed properties
@@ -30,7 +30,7 @@ var vector2 = {'x': badVector['x'], 'y': badVector['y']};
 It's also possible to use ECMAScript 6 computed properties syntax for extraction:
 
 ```javascript
-var badVector = {beta: 2, alpha: 1, gamma: 3};
+var badVector = { beta: 2, alpha: 1, gamma: 3 };
 
 var vector = {
     badVector['alp' + 'ha'],
@@ -41,7 +41,7 @@ var vector = {
 This desugars into following:
 
 ```javascript
-var badVector = {beta: 2, alpha: 1, gamma: 3};
+var badVector = { beta: 2, alpha: 1, gamma: 3 };
 
 var _propName1 = 'alp' + 'ha';
 var _propName2 = 'be' + 'ta';
