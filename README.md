@@ -43,10 +43,10 @@ This desugars into following:
 ```javascript
 var badVector = { beta: 2, alpha: 1, gamma: 3 };
 
-var _propName1 = 'alp' + 'ha';
-var _propName2 = 'be' + 'ta';
+var _temp1, _temp2;
+
 var vector = {
-    [_propName1]: badVector[_propName1],
-    [_propName2]: badVector[_propName2]
+    [_temp1 = 'alp' + 'ha']: badVector[_temp1],
+    [_temp2 = 'be' + 'ta']: badVector[_temp2]
 };
 ```
