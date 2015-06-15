@@ -8,7 +8,7 @@ This proposal introduces ability to extract given properties of object into new 
 
 ### Regular properties
 
-Syntax is similar to one already implemented in C# and looks like following:
+Syntax is similar to one already implemented in C# ([read more](https://msdn.microsoft.com/en-us/library/bb384062.aspx)) and looks like following:
 
 ```javascript
 var badVector = { y: 2, x: 1, z: 3 };
